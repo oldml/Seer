@@ -1,65 +1,51 @@
-# 赛尔号台服脱机小助手
+# 赛尔号台服脱机小助手 (Seer TW Offline Helper)
 
-这是一个用于赛尔号台服护肝的Python项目（烂尾了）
+> [!WARNING]
+> **重要通知：此仓库已不再维护。**
+>
+> 所有最新的代码、问题跟踪 (Issues) 和更新都已迁移至新的 GitHub 仓库。请访问以下链接：
+>
+> ## 👉 [https://github.com/oldml/SeerTaiwanRoutineHelper](https://github.com/oldml/SeerTaiwanRoutineHelper)
 
-## 功能
+> [!NOTE]
+> 旧版代码中的注释部分是由 AI 辅助生成的，可能存在不准确之处。请以实际代码逻辑为准。
 
-* **用户认证系统**：处理用户登录及相关认证逻辑 (基于 [`Login.py`](Login.py:0))。
-* **宠物战斗管理**：管理宠物战斗的核心逻辑，包括战斗流程和相关数据包处理 (基于 [`PetFightPacketManager.py`](PetFightPacketManager.py:0))。
-* **网络通信模块**：负责处理网络数据包的发送与接收，以及数据包内容的分析 (基于 [`ReceivePacketAnalysis.py`](ReceivePacketAnalysis.py:0) 和 [`SendPacketProcessing.py`](SendPacketProcessing.py:0))。
-* **核心算法实现**：包含项目所依赖的核心算法或特定计算逻辑 (基于 [`Algorithms.py`](Algorithms.py:0))。
-* **UI 配置管理**：管理和配置用户界面的相关参数 (基于 [`ui_config.py`](ui_config.py:0))。
-* **主程序入口**：项目的启动和主要流程控制 (基于 [`main.py`](main.py:0))。
-* **配置管理**：通过外部文件管理项目配置 (基于 [`config.ini`](config.ini:0))。
-* 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python Version](https://img.shields.io/badge/python-3.x-blue.svg)](https://www.python.org/)
 
-## 项目结构
+本项目是一个基于 Python 开发的赛尔号（台服）脱机辅助工具，旨在自动化处理游戏内的重复性操作，为玩家“护肝”。
 
-- [`main.py`](main.py:0): 项目主入口程序，负责启动和协调各个模块。
-- [`Login.py`](Login.py:0): 处理用户登录认证逻辑。
-- [`PetFightPacketManager.py`](PetFightPacketManager.py:0): 管理宠物战斗相关的数据包和核心战斗逻辑。
-- [`ReceivePacketAnalysis.py`](ReceivePacketAnalysis.py:0): 负责接收网络数据包并进行分析。
-- [`SendPacketProcessing.py`](SendPacketProcessing.py:0): 负责处理和发送网络数据包。
-- [`Algorithms.py`](Algorithms.py:0): 包含项目使用的核心算法。
-- [`ui_config.py`](ui_config.py:0): 存储和管理UI相关的配置信息。
-- [`config.ini`](config.ini:0): 项目的主要配置文件，用于存储可配置参数。
-- [`Command.json`](Command.json): 定义了项目支持的命令或指令集。
-- [`game.log`](game.log:0): 游戏或应用程序的日志文件。
-- [`.gitignore`](.gitignore:0): 指定了git版本控制中应忽略的文件和目录。
-- [`LICENSE`](LICENSE:0): 项目的许可证文件。
-- [`README.md`](README.md:0): 项目的说明文档。
+## ✨ 功能 (Features)
 
-## 技术栈
+*   **用户认证系统**：处理用户登录及相关认证逻辑。
+*   **宠物战斗管理**：管理宠物战斗的核心逻辑，包括战斗流程和数据包处理。
+*   **网络通信模块**：负责处理网络数据包的发送、接收与解析。
+*   **核心算法实现**：包含项目所依赖的特定计算逻辑。
+*   **UI 配置管理**：通过 `ui_config.py` 管理用户界面的相关参数。
 
-* **主要语言**: Python 3.x
-* **标准库**:
-  * `logging` (用于日志记录)
-* **配置文件格式**:
-  * INI ([`config.ini`](config.ini:0))
-  * JSON ([`Command.json`](Command.json))
-* **开发环境建议**:
-  * Visual Studio Code (或其他 Python IDE)
+## 🔧 技术栈 (Tech Stack)
 
-## 安装指南
+*   **主要语言**: Python 3.x
+*   **标准库**: `socket`, `threading`， `logging` 等
+*   **配置文件**: INI (`config.ini`), JSON (`Command.json`)
+
+## 🚀 快速开始 (Getting Started)
+
+### 1. 环境准备
+
+确保您的环境中已安装 Python 3。
+
+### 2. 克隆与安装
 
 ```bash
-git clone [请在此处填写您的仓库链接]
-cd [请在此处填写项目目录名，通常是仓库名]
-pip install -r requirements.txt
-```
+# 克隆仓库
+git clone https://github.com/oldml/Seer.git
 
-## 使用说明
+# 进入项目目录
+cd your-repo-name
 
-运行主程序：
+# 安装依赖
+pip install package_name
 
-```bash
+# 运行主程序
 python ui_config.py
-```
-
-## 贡献
-
-欢迎通过提交 Pull Request 来为本项目做出贡献。
-
-## 许可证
-
-本项目采用 MIT 许可证。详情请参阅 [`LICENSE`](LICENSE:0) 文件。
